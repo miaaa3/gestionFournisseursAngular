@@ -1,0 +1,165 @@
+<div class="bg-white py-24 sm:py-32">
+    <div class="flex flex-wrap place-content-around mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="grid grid-cols-1 h-80 gap-x-32 gap-y-16 text-center lgMax:justify-items-center md:grid-cols-2 lg:grid-cols-3">
+        <div  class="max-w-sm flex flex-col gap-y-4">
+            <a (mouseover)="counter1()"  class="group/item1 block max-w-sm p-10 bg-white border border-gray-200 rounded-xl shadow hover:bg-gray-100 transition ease-in delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-500 hover:h-full dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"  routerLink="/liste-fournisseurs">
+                <div class="flex justify-center flex-col items-center flex-wrap">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">All fournisseurs</h5>
+                    <p class="font-normal text-2xl hidden text-gray-700 sm:group-hover/item1:block dark:text-gray-400">{{projectCount1}} </p>
+                    <img  width="94"  height="94" src="https://img.icons8.com/3d-fluency/94/supplier.png" alt="supplier"/>
+                    <button type="button" class="relative top-14 hidden  inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 sm:group-hover/item1:block group-hover:from-purple-600 group-hover:to-blue-500 hover:text-purple-300 dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"  routerLink="/liste-fournisseurs">
+                        <span class=" flex relative px-3 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                        All fournisseurs
+                        <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </span>
+                    </button>
+                </div>
+                <svg aria-hidden="true" class="w-5 h-5 ml-60 -mr-1 hidden lgMax:block" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </a>
+        </div>
+        <div  class="max-w-sm flex flex-col gap-y-4">
+            <a  (mouseover)="counter2()"  class="group/item1 block max-w-sm  p-10 bg-white border border-gray-200 rounded-xl shadow hover:bg-gray-100 transition ease-in delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-500 hover:h-full dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700" routerLink="/liste-fournisseurs">
+                <div class="flex justify-center flex-col items-center flex-wrap">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">All products</h5>
+                    <p class="font-normal text-2xl hidden text-gray-700 sm:group-hover/item1:block dark:text-gray-400">{{projectCount2}} </p>
+                    <img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/package.png" alt="package"/>
+                    <button type="button" class="relative top-14  hidden inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 sm:group-hover/item1:block group-hover:from-purple-600 group-hover:to-blue-500 hover:text-purple-300 dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800" routerLink="/liste-fournisseurs">
+                        <span class=" flex relative px-3 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                            All products
+                        <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </span>
+                    </button>
+                </div>
+                <svg aria-hidden="true" class="w-5 h-5 ml-60 -mr-1 hidden lgMax:block" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </a>
+        </div>
+        <div  class="max-w-sm flex flex-col gap-y-4">
+            <a href="#" (mouseover)="counter3()"  class="group/item1 block max-w-sm p-10 bg-white border border-gray-200 rounded-xl shadow hover:bg-gray-100 transition ease-in delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-500 hover:h-full dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                <div class="flex justify-center flex-col items-center flex-wrap">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">All command</h5>
+                    <p class="font-normal text-2xl hidden text-gray-700 sm:group-hover/item1:block dark:text-gray-400">{{projectCount3}} </p>
+                    <img width="94" height="94" src="https://img.icons8.com/external-itim2101-lineal-color-itim2101/64/external-order-online-shopping-itim2101-lineal-color-itim2101.png" alt="external-order-online-shopping-itim2101-lineal-color-itim2101"/>
+                    <button type="button" class="relative top-14  hidden inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 sm:group-hover/item1:block group-hover:from-purple-600 group-hover:to-blue-500 hover:text-purple-300 dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+                        <span class=" flex relative px-3 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                        All command
+                        <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </span>
+                    </button>
+                </div>
+                <svg aria-hidden="true" class="w-5 h-5 ml-60 -mr-1 hidden lgMax:block" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </a>
+        </div>
+      </div>
+      <div class="flex hidden xl:flex container mx-auto">
+            <div class="container mx-auto">
+                    <div class="flex flex-col items-center w-full  max-w-screen-md p-6 pb-3 bg-white rounded-lg shadow-2xl transition ease-in delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-200 sm:p-8">
+                        <h2 class="text-xl font-bold">Monthly Depense</h2>
+                        <span class="text-sm font-semibold text-gray-500">2020</span>
+                        <div class="flex items-end flex-grow w-full mt-2 space-x-2 sm:space-x-3">
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$37,500</span>
+                                <div class="relative flex justify-center w-full h-8 bg-indigo-200"></div>
+                                <div class="relative flex justify-center w-full h-6 bg-indigo-300"></div>
+                                <div class="relative flex justify-center w-full h-16 bg-indigo-400"></div>
+                                <span class="absolute bottom-0 text-xs font-bold">Jan</span>
+                            </div>
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$45,000</span>
+                                <div class="relative flex justify-center w-full h-10 bg-indigo-200"></div>
+                                <div class="relative flex justify-center w-full h-6 bg-indigo-300"></div>
+                                <div class="relative flex justify-center w-full h-20 bg-indigo-400"></div>
+                                <span class="absolute bottom-0 text-xs font-bold">Feb</span>
+                            </div>
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$47,500</span>
+                                <div class="relative flex justify-center w-full h-10 bg-indigo-200"></div>
+                                <div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
+                                <div class="relative flex justify-center w-full h-20 bg-indigo-400"></div>
+                                <span class="absolute bottom-0 text-xs font-bold">Mar</span>
+                            </div>
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$50,000</span>
+                                <div class="relative flex justify-center w-full h-10 bg-indigo-200"></div>
+                                <div class="relative flex justify-center w-full h-6 bg-indigo-300"></div>
+                                <div class="relative flex justify-center w-full h-24 bg-indigo-400"></div>
+                                <span class="absolute bottom-0 text-xs font-bold">Apr</span>
+                            </div>
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$47,500</span>
+                                <div class="relative flex justify-center w-full h-10 bg-indigo-200"></div>
+                                <div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
+                                <div class="relative flex justify-center w-full h-20 bg-indigo-400"></div>
+                                <span class="absolute bottom-0 text-xs font-bold">May</span>
+                            </div>
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$55,000</span>
+                                <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
+                                <div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
+                                <div class="relative flex justify-center w-full h-24 bg-indigo-400"></div>
+                                <span class="absolute bottom-0 text-xs font-bold">Jun</span>
+                            </div>
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$60,000</span>
+                                <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
+                                <div class="relative flex justify-center w-full h-16 bg-indigo-300"></div>
+                                <div class="relative flex justify-center w-full h-20 bg-indigo-400"></div>
+                                <span class="absolute bottom-0 text-xs font-bold">Jul</span>
+                            </div>
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$57,500</span>
+                                <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
+                                <div class="relative flex justify-center w-full h-10 bg-indigo-300"></div>
+                                <div class="relative flex justify-center w-full h-24 bg-indigo-400"></div>
+                                <span class="absolute bottom-0 text-xs font-bold">Aug</span>
+                            </div>
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$67,500</span>
+                                <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
+                                <div class="relative flex justify-center w-full h-10 bg-indigo-300"></div>
+                                <div class="relative flex justify-center w-full h-32 bg-indigo-400"></div>
+                                <span class="absolute bottom-0 text-xs font-bold">Sep</span>
+                            </div>
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$65,000</span>
+                                <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
+                                <div class="relative flex justify-center w-full h-12 bg-indigo-300"></div>
+                                <div class="relative flex justify-center w-full bg-indigo-400 h-28"></div>
+                                <span class="absolute bottom-0 text-xs font-bold">Oct</span>
+                            </div>
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$70,000</span>
+                                <div class="relative flex justify-center w-full h-8 bg-indigo-200"></div>
+                                <div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
+                                <div class="relative flex justify-center w-full h-40 bg-indigo-400"></div>
+                                <span class="absolute bottom-0 text-xs font-bold">Nov</span>
+                            </div>
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$75,000</span>
+                                <div class="relative flex justify-center w-full h-12 bg-indigo-200"></div>
+                                <div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
+                                <div class="relative flex justify-center w-full h-40 bg-indigo-400"></div>
+                                <span class="absolute bottom-0 text-xs font-bold">Dec</span>
+                            </div>
+                        </div>
+                        <div class="flex w-full mt-3">
+                            <div class="flex items-center ml-auto">
+                                <span class="block w-4 h-4 bg-indigo-400"></span>
+                                <span class="ml-1 text-xs font-medium">Existing</span>
+                            </div>
+                            <div class="flex items-center ml-4">
+                                <span class="block w-4 h-4 bg-indigo-300"></span>
+                                <span class="ml-1 text-xs font-medium">Upgrades</span>
+                            </div>
+                            <div class="flex items-center ml-4">
+                                <span class="block w-4 h-4 bg-indigo-200"></span>
+                                <span class="ml-1 text-xs font-medium">New</span>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+    </div>
+  </div>
+ 
