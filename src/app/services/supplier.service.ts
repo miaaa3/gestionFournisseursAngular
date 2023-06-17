@@ -6,9 +6,9 @@ import { Injectable } from '@angular/core';
 })
 export class SupplierService {
   constructor(private http: HttpClient) { }
-insertSupplier(data:any){
-  return  this.http.get("http://localhost:8000/insert_supplier",data)
-}
+  insertSupplier(data: any) {
+    return this.http.post("http://localhost:8000/insert_supplier", data);
+  }  
 getOneSupplier(id:number){
   return  this.http.get("http://localhost:8000/getOneSupplier?id="+id)
 }

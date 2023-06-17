@@ -2,14 +2,14 @@
     <div class="flex flex-wrap place-content-around mx-auto max-w-7xl px-6 lg:px-8">
       <div class="grid grid-cols-1 h-80 gap-x-32 gap-y-16 text-center lgMax:justify-items-center md:grid-cols-2 lg:grid-cols-3">
         <div  class="max-w-sm flex flex-col gap-y-4">
-            <a (mouseover)="counter1()"  class="group/item1 block max-w-sm p-10 bg-white border border-gray-200 rounded-xl shadow hover:bg-gray-100 transition ease-in delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-500 hover:h-full dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"  routerLink="/liste-fournisseurs">
+            <a (mouseover)="counter1()"  class="group/item1 block max-w-sm p-10 bg-white border border-gray-200 rounded-xl shadow hover:bg-gray-100 transition ease-in delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-500 hover:h-full dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"  routerLink="/suppliers-list">
                 <div class="flex justify-center flex-col items-center flex-wrap">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">All fournisseurs</h5>
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">All Suppliers</h5>
                     <p class="font-normal text-2xl hidden text-gray-700 sm:group-hover/item1:block dark:text-gray-400">{{projectCount1}} </p>
                     <img  width="94"  height="94" src="https://img.icons8.com/3d-fluency/94/supplier.png" alt="supplier"/>
-                    <button type="button" class="relative top-14 hidden  inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 sm:group-hover/item1:block group-hover:from-purple-600 group-hover:to-blue-500 hover:text-purple-300 dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"  routerLink="/liste-fournisseurs">
+                    <button type="button" class="relative top-14 hidden  inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 sm:group-hover/item1:block group-hover:from-purple-600 group-hover:to-blue-500 hover:text-purple-300 dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"  routerLink="/suppliers-list">
                         <span class=" flex relative px-3 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                        All fournisseurs
+                        All Suppliers
                         <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                         </span>
                     </button>
@@ -18,12 +18,12 @@
             </a>
         </div>
         <div  class="max-w-sm flex flex-col gap-y-4">
-            <a  (mouseover)="counter2()"  class="group/item1 block max-w-sm  p-10 bg-white border border-gray-200 rounded-xl shadow hover:bg-gray-100 transition ease-in delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-500 hover:h-full dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700" routerLink="/liste-fournisseurs">
+            <a  (mouseover)="counter2()"  class="group/item1 block max-w-sm  p-10 bg-white border border-gray-200 rounded-xl shadow hover:bg-gray-100 transition ease-in delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-500 hover:h-full dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700" routerLink="/suppliers-list">
                 <div class="flex justify-center flex-col items-center flex-wrap">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">All products</h5>
                     <p class="font-normal text-2xl hidden text-gray-700 sm:group-hover/item1:block dark:text-gray-400">{{projectCount2}} </p>
                     <img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/package.png" alt="package"/>
-                    <button type="button" class="relative top-14  hidden inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 sm:group-hover/item1:block group-hover:from-purple-600 group-hover:to-blue-500 hover:text-purple-300 dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800" routerLink="/liste-fournisseurs">
+                    <button type="button" class="relative top-14  hidden inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 sm:group-hover/item1:block group-hover:from-purple-600 group-hover:to-blue-500 hover:text-purple-300 dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800" routerLink="/suppliers-list">
                         <span class=" flex relative px-3 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                             All products
                         <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
