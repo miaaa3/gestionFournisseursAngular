@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SuppliersListComponent } from './suppliers-list/suppliers-list.component';
+import { ProductsComponent } from './products/products.component';
+import { CommandsComponent } from './commands/commands.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { SuppliersListComponent } from './suppliers-list/suppliers-list.componen
     SuppliersListComponent,
     NavbarComponent,
     LoginPageComponent,
-    DashboardComponent
+    DashboardComponent,
+    ProductsComponent,
+    CommandsComponent
   ],
   imports: [
     BrowserModule,

@@ -23,14 +23,7 @@ export class SuppliersListComponent {
     public router: Router,
     private formBuilder: FormBuilder
   ) {
-    this.supplierForm = this.formBuilder.group({
-      name: '',
-      email: '',
-      address: '',
-      phone: '',
-      city: '',
-      picture: null
-    });
+    
   }
 
   ngOnInit(): void {
@@ -81,28 +74,5 @@ export class SuppliersListComponent {
     toast.show();
   }
 
-  onFileSelected(event: any) {
-    const file = event.target.files[0];
-    this.supplierForm.patchValue({ picture: file });
-  }
-
-  onSubmit() {
-    console.log('Form submitted');
-    const formData = new FormData();
-    formData.append('name', this.supplierForm.value.name);
-    formData.append('email', this.supplierForm.value.email);
-    formData.append('address', this.supplierForm.value.address);
-    formData.append('phone', this.supplierForm.value.phone);
-    formData.append('city', this.supplierForm.value.city);
-    formData.append('picture', this.supplierForm.value.picture);
-
-    this.supplierService.insertSupplier(formData).subscribe(() => {
-      this.showToast();
-      console.log(formData);
-      setTimeout(() => {
-        this.router.navigate(['']);
-      }, 1000);
-      console.log('Supplier added successfully');
-    });
-  }
+  
 }
