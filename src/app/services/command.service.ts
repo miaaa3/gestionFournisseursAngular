@@ -3,10 +3,11 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class ProductService {
+export class CommandService {
 
+ 
   constructor(private http: HttpClient) { }
-  getProducts(){
-    return this.http.get("http://localhost:8000/list_products")
+  getCommands(){
+    return this.http.get("http://localhost:8000/list_commands")
   }
 }

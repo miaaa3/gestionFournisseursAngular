@@ -1,1 +1,188 @@
-<p>commands works!</p>
+<div class="container-sm">
+
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-5">
+      <div class="flex items-center justify-between py-4 bg-white dark:bg-gray-800">
+          <div class="ml-3">
+              <button  id="dropdownActionButton" data-dropdown-toggle="dropdownAction" class="inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
+                  <span class="sr-only">Ajoute command</span>
+                        Add New command
+            
+              </button>
+              
+              <div [ngClass]="{'hidden': isHidden, 'block': !isHidden}" id="large-modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+  
+                <!-- Modal content -->
+              <div class="flex items-center justify-center h-full">
+                <div class=" relative bg-white rounded-lg shadow dark:bg-gray-700">
+                    <button  type="button" class="absolute top-5 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-hide="authentication-modal">
+                        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                    <div class="px-6 py-6 lg:px-8">
+                        <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Add a command</h3>
+                        <form class="space-y-6 newEmployee"  #commandform="ngForm"  enctype="multipart/form-data">
+                        
+                          <div class="px-6 py-6 lg:px-8">
+                            <label for="dropzone-file" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">command's Picture :</label>
+                            <div class="flex items-center justify-center w-full">
+                              
+                              <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                                  <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                      <svg aria-hidden="true" class="w-10 h-10 mb-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                                      <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                                      <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                                  </div>
+                                  <input name="picture"    id="dropzone-file" type="file" class="hidden" />
+                              </label>
+                            </div>
+                            </div>
+                          <div class="flex justify-around">
+                            <div>
+                              <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name :</label>
+                              <input type="text" name="name"  id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 px-15 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">command's Email :</label>
+                                <input type="email" name="email"  id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 px-15 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required>
+                            </div>
+                          </div>
+                          <div class="flex justify-around">
+                            <div>
+                              <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone Number :</label>
+                              <input type="text" name="phone"  id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 px-15 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="06 XX XX XX XX" required>
+                            </div>
+                            <div>
+                              <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">command's Adress :</label>
+                              <input type="text" name="address" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 px-15 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                            </div>
+                          </div>
+                            <div>
+                                <label for=" city" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">command's City :</label>
+                                <input type="text" name="city"   id="city"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                            </div>
+                            
+                            <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add</button>
+                          
+                        </form>
+                    </div>
+                </div>
+              </div>
+            </div> 
+
+          </div>
+          <label for="table-search" class="sr-only">Search</label>
+          <div class="relative mr-3" >
+              <div class="absolute inset-y-0 right-1 flex items-center pl-3 pointer-events-none">
+                  <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+              </div>
+              <input type="text" id="table-search-users" class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for commands">
+          </div>
+      </div>
+      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+              <tr>
+                  <th scope="col" class="p-4">
+                      <div class="flex items-center">
+                          
+                          <label for="checkbox-all-search" class="sr-only">checkbox</label>
+                      </div>
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                      ID
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                      Profile
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                      Phone
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                      Address
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                     created At
+                </th>
+                  <th scope="col" class="px-6 py-3">
+                      Update
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                      Delete
+                  </th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let command of commands; let i = index" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                  <td class="w-4 p-4">
+                    <div class="flex items-center">
+                          <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                          <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                      </div>
+                  </td>
+                  <th class="px-6 py-4">
+                    {{command.id}}
+                </th>
+                  <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                      <img class="w-10 h-10 rounded-full" src="{{command.picture}}" alt="{{command.name}}">
+                      <div class="pl-3">
+                          <div class="text-base font-semibold">{{command.name}}</div>
+                          <div class="font-normal text-gray-500">{{command.email}}</div>
+                      </div>  
+                  </th>
+                  <td class="px-6 py-4">
+                    {{command.phone}}
+                  </td>
+                  <td class="px-6 py-4">
+                    {{command.address}}
+                  </td>
+                  <td class="px-6 py-4">
+                    {{ command.createdAt.date }}
+                  </td>
+                  <td class="px-6 py-4">
+                    <img  class="icon" src="assets/icons/update.png" title="Update command" alt="Update">
+                  </td>
+                  <td class="px-6 py-4">
+                    <img  class="icon" src="assets/icons/delete.png" title="Supprimer le command" alt="Supprimer">
+                </td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+  
+  </div>
+
+    <!-- Modal de confirmation -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Delete command</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Are you sure you want to delete this command?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Message toast de notification -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="confirmationToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <img src="assets/icons/check.png" width="30px" height="30px" class="rounded me-2" alt="">
+          <strong class="me-auto">Notification</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          command Deleted 
+        </div>
+      </div>
+    </div>
+
+      
+
+    
