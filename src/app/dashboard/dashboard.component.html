@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div class="bg-white py-24 sm:py-32">
     <div class="flex flex-wrap place-content-around mx-auto max-w-7xl px-6 lg:px-8">
       <div class="grid grid-cols-1 h-80 gap-x-32 gap-y-16 text-center lgMax:justify-items-center md:grid-cols-2 lg:grid-cols-3">
@@ -18,7 +19,7 @@
             </a>
         </div>
         <div  class="max-w-sm flex flex-col gap-y-4">
-            <a  (mouseover)="counter2()"  class="group/item1 block max-w-sm  p-10 bg-white border border-gray-200 rounded-xl shadow hover:bg-gray-100 transition ease-in delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-500 hover:h-full dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700" routerLink="/suppliers-list">
+            <a  (mouseover)="counter2()"  class="group/item1 block max-w-sm  p-10 bg-white border border-gray-200 rounded-xl shadow hover:bg-gray-100 transition ease-in delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-500 hover:h-full dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700" routerLink="/products">
                 <div class="flex justify-center flex-col items-center flex-wrap">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">All products</h5>
                     <p class="font-normal text-2xl hidden text-gray-700 sm:group-hover/item1:block dark:text-gray-400">{{projectCount2}} </p>
@@ -34,7 +35,7 @@
             </a>
         </div>
         <div  class="max-w-sm flex flex-col gap-y-4">
-            <a href="#" (mouseover)="counter3()"  class="group/item1 block max-w-sm p-10 bg-white border border-gray-200 rounded-xl shadow hover:bg-gray-100 transition ease-in delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-500 hover:h-full dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <a  (mouseover)="counter3()"  class="group/item1 block max-w-sm p-10 bg-white border border-gray-200 rounded-xl shadow hover:bg-gray-100 transition ease-in delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-500 hover:h-full dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700" routerLink="/commands">
                 <div class="flex justify-center flex-col items-center flex-wrap">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">All command</h5>
                     <p class="font-normal text-2xl hidden text-gray-700 sm:group-hover/item1:block dark:text-gray-400">{{projectCount3}} </p>

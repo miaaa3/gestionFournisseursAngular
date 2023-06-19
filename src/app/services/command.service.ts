@@ -8,6 +8,6 @@ export class CommandService {
  
   constructor(private http: HttpClient) { }
   getCommands(){
-    return this.http.get("http://localhost:8000/list_commands")
+    return this.http.get("https://localhost:8000/list_commands")
   }
 }

@@ -19,6 +19,6 @@ updateSupplier(data:any){
   return  this.http.get("http://localhost:8000/update_supplier",data)
 }
 getSuppliers(){
-  return this.http.get("http://localhost:8000/list_suppliers")
+  return this.http.get("https://localhost:8000/list_suppliers")
 }
 }

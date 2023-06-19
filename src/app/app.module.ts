@@ -10,6 +10,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SuppliersListComponent } from './suppliers-list/suppliers-list.component';
 import { ProductsComponent } from './products/products.component';
 import { CommandsComponent } from './commands/commands.component';
+import { UserSettingsComponent } from './user-settings/user-settings.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CommandsComponent } from './commands/commands.component';
     LoginPageComponent,
     DashboardComponent,
     ProductsComponent,
-    CommandsComponent
+    CommandsComponent,
+    UserSettingsComponent
   ],
   imports: [
     BrowserModule,

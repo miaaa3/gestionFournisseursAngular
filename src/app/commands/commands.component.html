@@ -1,9 +1,10 @@
+<app-navbar></app-navbar>
 <div class="container-sm">
 
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-5">
       <div class="flex items-center justify-between py-4 bg-white dark:bg-gray-800">
           <div class="ml-3">
-              <button  id="dropdownActionButton" data-dropdown-toggle="dropdownAction" class="inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
+              <button (click)="toggleClassModelAjoute()" id="dropdownActionButton" data-dropdown-toggle="dropdownAction" class="inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
                   <span class="sr-only">Ajoute command</span>
                         Add New command
             
@@ -14,7 +15,7 @@
                 <!-- Modal content -->
               <div class="flex items-center justify-center h-full">
                 <div class=" relative bg-white rounded-lg shadow dark:bg-gray-700">
-                    <button  type="button" class="absolute top-5 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-hide="authentication-modal">
+                    <button (click)="toggleClassModelAjoute()" type="button" class="absolute top-5 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-hide="authentication-modal">
                         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                         <span class="sr-only">Close modal</span>
                     </button>
@@ -22,44 +23,27 @@
                         <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Add a command</h3>
                         <form class="space-y-6 newEmployee"  #commandform="ngForm"  enctype="multipart/form-data">
                         
-                          <div class="px-6 py-6 lg:px-8">
-                            <label for="dropzone-file" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">command's Picture :</label>
-                            <div class="flex items-center justify-center w-full">
-                              
-                              <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
-                                  <div class="flex flex-col items-center justify-center pt-5 pb-6">
-                                      <svg aria-hidden="true" class="w-10 h-10 mb-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
-                                      <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
-                                      <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
-                                  </div>
-                                  <input name="picture"    id="dropzone-file" type="file" class="hidden" />
-                              </label>
-                            </div>
-                            </div>
                           <div class="flex justify-around">
                             <div>
-                              <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name :</label>
-                              <input type="text" name="name"  id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 px-15 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                                <label for=" city" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">delivery Delay :</label>
+                                <input type="text" name="city"   id="city"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 px-15 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
                             </div>
                             <div>
-                                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">command's Email :</label>
-                                <input type="email" name="email"  id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 px-15 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required>
+                                <label for="delivery_method" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">delivery Method :</label>
+                                <input type="text" name="delivery_method"  id="delivery_method" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 px-15 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
                             </div>
                           </div>
                           <div class="flex justify-around">
                             <div>
-                              <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone Number :</label>
+                              <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">payement Method :</label>
                               <input type="text" name="phone"  id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 px-15 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="06 XX XX XX XX" required>
                             </div>
                             <div>
-                              <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">command's Adress :</label>
+                              <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">command's Address :</label>
                               <input type="text" name="address" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 px-15 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
                             </div>
                           </div>
-                            <div>
-                                <label for=" city" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">command's City :</label>
-                                <input type="text" name="city"   id="city"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
-                            </div>
+                            
                             
                             <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add</button>
                           
@@ -91,17 +75,26 @@
                       ID
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      Profile
+                      created At
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      Phone
+                      Status
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      Address
+                      Payement Method
                   </th>
                   <th scope="col" class="px-6 py-3">
-                     created At
-                </th>
+                      Amount Excl. Tax
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                      Delivery Method
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                      Delivery Delay
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                      Shipping Address
+                  </th>
                   <th scope="col" class="px-6 py-3">
                       Update
                   </th>
@@ -120,28 +113,33 @@
                   </td>
                   <th class="px-6 py-4">
                     {{command.id}}
-                </th>
-                  <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                      <img class="w-10 h-10 rounded-full" src="{{command.picture}}" alt="{{command.name}}">
-                      <div class="pl-3">
-                          <div class="text-base font-semibold">{{command.name}}</div>
-                          <div class="font-normal text-gray-500">{{command.email}}</div>
-                      </div>  
                   </th>
-                  <td class="px-6 py-4">
-                    {{command.phone}}
-                  </td>
-                  <td class="px-6 py-4">
-                    {{command.address}}
-                  </td>
                   <td class="px-6 py-4">
                     {{ command.createdAt.date }}
                   </td>
                   <td class="px-6 py-4">
-                    <img  class="icon" src="assets/icons/update.png" title="Update command" alt="Update">
+                    {{command.status}}
                   </td>
                   <td class="px-6 py-4">
-                    <img  class="icon" src="assets/icons/delete.png" title="Supprimer le command" alt="Supprimer">
+                    {{command.paymentMethod}}
+                  </td>
+                  <td class="px-6 py-4">
+                    {{ command.montantHT }}
+                  </td>
+                  <td class="px-6 py-4">
+                    {{ command.deliveryMethod }}
+                  </td>
+                  <td class="px-6 py-4">
+                    {{ command.deliveryDelay}}
+                  </td>
+                  <td class="px-6 py-4">
+                    {{ command.shippingAddress }}
+                  </td>
+                  <td class="px-6 py-4">
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/000000/pencil--v1.png" alt="pencil--v1"/>
+                  </td>
+                  <td class="px-6 py-4">
+                    <img width="30" height="30" src="https://img.icons8.com/parakeet/48/recycle-bin.png" alt="recycle-bin"/>
                 </td>
               </tr>
           </tbody>
@@ -173,7 +171,7 @@
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
       <div id="confirmationToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-header">
-          <img src="assets/icons/check.png" width="30px" height="30px" class="rounded me-2" alt="">
+          <img src="" width="30px" height="30px" class="rounded me-2" alt="">
           <strong class="me-auto">Notification</strong>
           <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>

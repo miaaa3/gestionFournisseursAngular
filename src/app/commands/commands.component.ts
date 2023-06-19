@@ -17,7 +17,10 @@ export class CommandsComponent {
   toggleClassModelAjoute(): void {
     this.isHidden = !this.isHidden;
   }
-  loadProducts() {
+  ngOnInit(): void {
+    this.loadCommads();
+  }
+  loadCommads() {
     this.commandService.getCommands().subscribe(
       data => {
         this.commands= data;

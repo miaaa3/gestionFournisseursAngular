@@ -34,6 +34,7 @@ export class SuppliersListComponent {
     this.supplierService.getSuppliers().subscribe(
       data => {
         this.suppliers = data;
+        console.log(data);
       },
       (err: any) => {
         console.log(err);

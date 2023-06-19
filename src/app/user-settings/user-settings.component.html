@@ -1,0 +1,165 @@
+<app-navbar></app-navbar>
+<div class="flex h-screen flex-wrap content-center justify-center container lg-auto">
+    <!-- ... -->
+  
+    <div class="bg-white max-w-2xl shadow overflow-hidden sm:rounded-lg">
+        <div class="flex justify-end mt-2 mr-2" >
+            <img class="rounded w-9 h-9 cursor-pointer hover:text-purple-300" src="../assets/image/icons8-setting.gif" alt="Settings" (click)="toggleClassMenu()">
+            
+        </div>
+        <div class=" flex  justify-around py-3 sm:px-6">
+            <div class="mx-3">
+                <h3 class="text-lg leading-6 font-medium text-gray-900">
+                    User database
+                </h3>
+                <p class="mt-1 max-w-2xl text-sm text-gray-500">
+                    Details and informations about user.
+                </p>
+            </div>
+            <div class="mx-2">
+                <img class="rounded w-36 h-36" src="../assets/image/daraganov2.png" alt="Large avatar">
+            </div>
+        </div>
+        <div class="border-t border-gray-200">
+            <dl>
+                <div class="bg-gray-50 px-4 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">
+                        Full name
+                    </dt>
+                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                        Amil Abdel Fattah
+                    </dd>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">
+                        Email address
+                    </dt>
+                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                        fattah.ptech2020@gmail.com
+                    </dd>
+                </div>
+                <div class="bg-white px-4 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">
+                        phone
+                    </dt>
+                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                        0X XX XX XX XX
+                    </dd>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">
+                        Address
+                    </dt>
+                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                        123 Main Street
+                    </dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+
+</div>
+<div [ngClass]="{'hidden': isHidden, 'block': !isHidden}" id="large-modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+  
+    <!-- Modal content -->
+  <div class="flex items-center justify-center h-full">
+    <div class=" relative bg-white w-10/12 rounded-lg shadow dark:bg-gray-700 mdMax:h-screen mdMax:w-full">
+        
+        <div>
+                
+              <div class="mt-5 md:mt-0 md:col-span-2">
+                <form action="#" method="POST">
+                  <div class=" sm:rounded-md sm:overflow-hidden">
+                    <div class="px-4 py-1 bg-white space-y-6 sm:p-6">
+                    <h2 class=" text-xl font-medium text-gray-900 dark:text-white">edit Profile user</h2>
+                    <button (click)="toggleClassMenu()" type="button" class="absolute top-5 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 text-sm ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-hide="authentication-modal">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Close modal</span>
+                    </button>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">
+                          Photo
+                        </label>
+                        <div class="mt-1 flex items-center">
+                          <span class="inline-block h-12 w-12 rounded-full overflow-hidden bg-gray-100">
+                            <svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                          </span>
+                          <button type="button" class="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            Change
+                          </button>
+                        </div>
+                      </div>
+                      <div >
+                        <div >
+                          <label for="company_website" class="block text-sm font-medium text-gray-700">
+                            Full name
+                          </label>
+                          <div class="mt-1 flex rounded-md shadow-sm">
+                            <input type="text" name="company_website" id="company_website" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" >
+                          </div>
+                        </div>
+                      </div>
+          
+                      <div >
+                        <div >
+                          <label for="company_website" class="block text-sm font-medium text-gray-700">
+                            Email address
+                          </label>
+                          <div class="mt-1 flex rounded-md shadow-sm">
+                            <input type="email" name="company_website" id="company_website" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="user@example.com">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div >
+                        <div >
+                          <label for="company_website" class="block text-sm font-medium text-gray-700">
+                            Password
+                          </label>
+                          <div class="mt-1 flex rounded-md shadow-sm">
+                            <input type="password" name="company_website" id="company_website" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div >
+                        <div >
+                          <label for="company_website" class="block text-sm font-medium text-gray-700">
+                            phone
+                          </label>
+                          <div class="mt-1 flex rounded-md shadow-sm">
+                            <input type="text" name="company_website" id="company_website" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="0X XX XX XX XX">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div >
+                        <div >
+                          <label for="company_website" class="block text-sm font-medium text-gray-700">
+                            Address
+                          </label>
+                          <div class="mt-1 flex rounded-md shadow-sm">
+                            <input type="text" name="company_website" id="company_website" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300">
+                          </div>
+                        </div>
+                      </div>
+                      
+          
+                      
+                    </div>
+                    <div class="px-4 py-2 bg-gray-50 text-right sm:px-6">
+                      <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        Save
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            
+          </div>
+    </div>
+  </div>
+</div> 

@@ -13,6 +13,9 @@ export class ProductsComponent {
   ) {
     
   }
+  ngOnInit(): void {
+    this.loadProducts();
+  }
 
   toggleClassModelAjoute(): void {
     this.isHidden = !this.isHidden;
